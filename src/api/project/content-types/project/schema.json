@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contact.contact",
+      "mappedBy": "project"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential",
+      "mappedBy": "project"
+    },
+    "servers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::server.server",
+      "inversedBy": "projects"
+    },
+    "time_lines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::time-line.time-line",
+      "mappedBy": "project"
+    },
+    "strapis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::strapi.strapi",
+      "mappedBy": "project"
+    }
+  }
+}

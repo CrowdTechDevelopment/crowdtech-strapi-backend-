@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "singularName": "provider",
+    "pluralName": "providers",
+    "displayName": "Provider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential",
+      "mappedBy": "provider"
+    }
+  }
+}

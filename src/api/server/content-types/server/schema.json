@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servers",
+  "info": {
+    "singularName": "server",
+    "pluralName": "servers",
+    "displayName": "Server"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ip": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "cpu": {
+      "type": "string"
+    },
+    "ram": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "system": {
+      "type": "enumeration",
+      "enum": [
+        "windows 10",
+        "windows 7",
+        "ubuntu 20",
+        "ubuntu 22"
+      ]
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "servers"
+    }
+  }
+}

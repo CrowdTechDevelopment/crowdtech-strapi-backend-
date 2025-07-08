@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_lines",
+  "info": {
+    "singularName": "time-line",
+    "pluralName": "time-lines",
+    "displayName": "TimeLine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "overview": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "time_lines"
+    }
+  }
+}
