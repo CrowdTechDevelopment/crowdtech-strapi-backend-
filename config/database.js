@@ -52,7 +52,7 @@ module.exports = ({ env }) => {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'dbcrowdtech'),
+        database: env('DATABASE_NAME', 'crowdtechprod'),
         user: env('DATABASE_USERNAME', 'crowdtech'),
         password: env('DATABASE_PASSWORD', 'MydROwSSapCrOWdTeCh'),
         ssl: env.bool('DATABASE_SSL', false) && {

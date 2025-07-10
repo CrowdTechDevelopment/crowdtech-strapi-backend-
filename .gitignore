@@ -87,6 +87,7 @@ exports/
 sessions/
 ssl/
 public/uploads/
+/public/*
 !public/uploads/.gitkeep
 
 ############################
