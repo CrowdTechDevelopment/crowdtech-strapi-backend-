@@ -86,7 +86,7 @@ exports/
 .strapi-updater.json
 sessions/
 ssl/
-public/uploads/
+!public/uploads/
 /public/*
 !public/uploads/.gitkeep
 
